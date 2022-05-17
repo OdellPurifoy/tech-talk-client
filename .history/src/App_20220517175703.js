@@ -12,7 +12,6 @@ import { Container, Navbar } from 'react-bootstrap';
 import AllUsers from './components/AllUsers';
 import AllPosts from './components/AllPosts';
 import 'bootstrap/dist/css/bootstrap.css';
-import Navigation from './components/layout/Navigation';
 
 const link = from([
   new HttpLink({ uri: 'http://localhost:3003/graphql' })
@@ -26,8 +25,10 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Navigation />
       <Container>
+        <Navbar bg='dark'>
+
+        </Navbar>
         <AllPosts />
         <AllUsers />
       </Container>
