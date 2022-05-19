@@ -28,7 +28,7 @@ function App() {
       <Navigation />
       <Container>
         <AllPosts />
-        {/* <AllUsers /> */}
+        <AllUsers />
       </Container>
     </ApolloProvider>
   );

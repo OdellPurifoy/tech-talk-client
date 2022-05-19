@@ -1,13 +1,14 @@
 import React from 'react';
 import {
   ApolloClient,
+  // createHttpLink,
   InMemoryCache,
   ApolloProvider,
   HttpLink,
   from,
 } from "@apollo/client";
 import { gql } from 'apollo-boost';
-import { Container } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import AllUsers from './components/AllUsers';
 import AllPosts from './components/AllPosts';
 import 'bootstrap/dist/css/bootstrap.css';

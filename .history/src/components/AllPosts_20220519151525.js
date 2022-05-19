@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { useQuery, gql } from '@apollo/client';
 import { GET_ALL_POSTS } from '../graphql/queries/getAllPosts';
-import Post from './posts/Post';
+import Post from './components/posts/Post.js';
 
-const AllPosts = () => {
+
+function AllPosts() {
   const { data } = useQuery(GET_ALL_POSTS);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     if (data) {
-      console.log(data)
         setPosts(data.posts);
     }
   }, [data]);
 
   return (
     <div>
-      {posts.map((post) => {
-        return <Post title={post.title} body={post.body} />;
+      {posts.map((val) => {
+        return <Post title={val.title} body={val.body} />;
     })}
     </div>
   )

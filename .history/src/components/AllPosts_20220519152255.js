@@ -3,7 +3,7 @@ import { useQuery, gql } from '@apollo/client';
 import { GET_ALL_POSTS } from '../graphql/queries/getAllPosts';
 import Post from './posts/Post';
 
-const AllPosts = () => {
+function AllPosts() {
   const { data } = useQuery(GET_ALL_POSTS);
   const [posts, setPosts] = useState([]);
 

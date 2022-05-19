@@ -27,8 +27,8 @@ function App() {
     <ApolloProvider client={client}>
       <Navigation />
       <Container>
-        <AllPosts />
-        {/* <AllUsers /> */}
+        {/* <AllPosts /> */}
+        <AllUsers />
       </Container>
     </ApolloProvider>
   );
