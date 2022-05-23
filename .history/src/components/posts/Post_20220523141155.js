@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 
 const Post = (props) => {
   return (
-    <Card className='mb-3'>
+    <Card className='pb-5'>
         <Card.Header>Featured</Card.Header>
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
